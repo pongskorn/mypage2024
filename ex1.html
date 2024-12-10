@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ค้นหา - RBRU E-Research ระบบฐานข้อมูลอิเล็กทรอนิกส์ </title> 
+	
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/showlogo.png">
+	<!-- For first-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/showlogo.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/showlogo.png">
+	<!-- For nokia devices: -->
+	<link rel="shortcut icon" href="images/showlogo.png">
+    <link rel="bookmark" href="images/showlogo.png"/>
+
+	<meta name="keywords" content="ระบบฐานข้อมูล, สารนิพนธ์, งานวิจัย, งานวิจัย, อิเล็กทรอนิกส์ , RBRU, electronics, rambhai, EThesis, ฐานข้อมูล, รำไพพรรณี, thesis, research">
+	<meta name="description" content="ระบบฐานข้อมูลสำหรับสืบค้นข้อมูลงานวิจัย ของคณาจารย์ เจ้าหน้าที่ และบุคลากรของมหาวิทยาลัยราชภัฏรำไพพรรณี ">
+    <!-- site css -->
+		<link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/site.min.css">
+    <!-- <link rel="stylesheet" href="webfont/stylesheet.css"> -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+	<style></style>
+    <script type="text/javascript" src="dist/js/site.min.js"></script>
+    <script type="text/javascript" src="js/myajax.js"></script>
+	
+	</head>
+	<body>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68207231-1', 'auto');
+  ga('send', 'pageview');
+
+</script>	<img src="images/showlogo.png" style="display:none;">
+	
+    <!--nav-->
+    <nav role="navigation" class="navbar navbar-custom">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button data-target="#bs-content-row-navbar-collapse-5" data-toggle="collapse" class="navbar-toggle" type="button">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a href="index.php"><img src="images/logo.png" style="width:90%; height:auto;"></a>
+              </div>
+            </div>
+
+            <div class="col-md-9">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div id="bs-content-row-navbar-collapse-5" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.php">หน้าหลัก</a></li>
+                    <li><a href="search.php?q=&group=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">ค้นหางานวิจัย</a></li>
+                    <li class="dropdown">
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">งานวิจัยตามหน่วยงาน<b class="caret"></b></a>
+            				  <ul role="menu" class="dropdown-menu">
+                              <li class="dropdown-header">หน่วยงาน</li>
+            				  <li><a href="search.php?q=&group=&dep=3&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะครุศาสตร์</a></li><li><a href="search.php?q=&group=&dep=8&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะนิติศาสตร์</a></li><li><a href="search.php?q=&group=&dep=9&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะนิเทศศาสตร์</a></li><li><a href="search.php?q=&group=&dep=13&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะพยาบาลศาสตร์</a></li><li><a href="search.php?q=&group=&dep=4&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะมนุษศาสตร์และสังคมศาสตร์</a></li><li><a href="search.php?q=&group=&dep=1&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</a></li><li><a href="search.php?q=&group=&dep=5&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะวิทยาการจัดการ</a></li><li><a href="search.php?q=&group=&dep=2&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะวิทยาศาสตร์และเทคโนโลยี</a></li><li><a href="search.php?q=&group=&dep=10&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะอัญมณีศาสตร์และประยุกต์ศิลป์</a></li><li><a href="search.php?q=&group=&dep=6&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะเทคโนโลยีการเกษตร</a></li><li><a href="search.php?q=&group=&dep=7&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">คณะเทคโนโลยีอุตสาหกรรม</a></li><li><a href="search.php?q=&group=&dep=11&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">สถาบันวิจัยและพัฒนา</a></li><li><a href="search.php?q=&group=&dep=14&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">สำนักวิทยบริการและเทคโนโลยีสารสนเทศ</a></li><li><a href="search.php?q=&group=&dep=12&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1">สำนักศิลปวัฒนธรรม</a></li>                      </ul>
+      			         </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">งานวิจัยตามปี พ.ศ.<b class="caret"></b></a>
+              				  <ul role="menu" class="dropdown-menu">
+                                <li class="dropdown-header">แบ่งตามปี พ.ศ.</li>
+                 				  <li><a href="search.php?q=2567&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2567</a></li><li><a href="search.php?q=2566&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2566</a></li><li><a href="search.php?q=2565&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2565</a></li><li><a href="search.php?q=2564&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2564</a></li><li><a href="search.php?q=2563&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2563</a></li><li><a href="search.php?q=2562&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2562</a></li><li><a href="search.php?q=2561&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2561</a></li><li><a href="search.php?q=2560&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2560</a></li><li><a href="search.php?q=2559&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2559</a></li><li><a href="search.php?q=2558&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2558</a></li><li><a href="search.php?q=2557&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2557</a></li><li><a href="search.php?q=2556&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2556</a></li><li><a href="search.php?q=2555&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2555</a></li><li><a href="search.php?q=2554&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2554</a></li><li><a href="search.php?q=2553&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2553</a></li><li><a href="search.php?q=2552&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2552</a></li><li><a href="search.php?q=2551&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2551</a></li><li><a href="search.php?q=2550&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2550</a></li><li><a href="search.php?q=2549&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2549</a></li><li><a href="search.php?q=2548&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2548</a></li><li><a href="search.php?q=2547&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2547</a></li><li><a href="search.php?q=2546&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2546</a></li><li><a href="search.php?q=2545&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=&rs=&kw=&yr=1">พ.ศ. 2545</a></li>                        </ul>
+      			        </li>
+                    <li class="dropdown">
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">สถิติงานวิจัย<b class="caret"></b></a>
+            				  <ul role="menu" class="dropdown-menu">
+                          <li class="dropdown-header">ประเภทของสถิติ</li>
+                				  <li><a href="chart.php?show=showbudgetorg">สถิติงบประมาณสนับสนุนการวิจัยจากแหล่งทุนต่าง ๆ</a></li>
+                				  <li><a href="chart.php?show=showbudgetinout">สถิติงบประมาณสนับสนุนการวิจัยจากแหล่งทุนภายในและภายนอก</a></li>
+                				  <li><a href="chart.php?show=showdepbudget">สถิติงบประมาณสนับสนุนการวิจัยแบ่งตามหน่วยงาน</a></li>
+                				  <li><a href="chart.php?show=showdep">สถิติจำนวนโครงการวิจัยแบ่งตามหน่วยงาน</a></li>
+                      </ul>
+      			        </li>
+                    <li><a href="worker.php">คณะทำงาน</a></li>
+
+                    <li class="dropdown">
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="administrator.php">ผู้ดูแลระบบ<b class="caret"></b></a>
+                      <ul role="menu" class="dropdown-menu">
+                        <li class="dropdown-header">Administrator</li>
+              				                                  <li><a href="administrator.php?ac=login">เข้าสู่ระบบ</a></li>
+              				                        </ul>
+                    </li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              <!-- </div> .col-md-9 -->
+          </div>   <!--  .row -->
+        </div><!-- /.container-fluid -->
+    </nav>
+	
+
+	<!-- top -->
+	<div class="container">  
+		<div class="row">
+			<div class="col-md-12"> 	
+			  <div class="jumbotron">
+				<div class="jumbotron-photo">
+					<img src="images/top.jpg" alt="ระบบฐานข้อมูลอิเล็กทรอนิกส์ { RBRU E-Research }"/>
+				</div>
+			  </div>  
+			</div>
+		</div>
+	</div>	
+	
+	<!-- documents -->
+	<div class="container">   
+	<ol class="breadcrumb breadcrumb-arrow">
+		<li><a href="index.php"><i class="glyphicon glyphicon-home"></i> หน้าหลัก</a></li> 
+		<li class="active"><span><i class="glyphicon glyphicon-list-alt"></i> ค้นหาข้อมูลงานวิจัย</span></li>
+	</ol> 
+		<div class="row">
+		<div class="col-md-12">
+			<h4 class="content-row-title">ค้นหางานวิจัย </h4> 
+	        <div class="panel panel-default"> 
+			<form method="get">
+				<div class="panel-heading">กำหนดรูปแบบการค้นหางานวิจัย</div>
+				<div class="col-md-9">
+					<div class="col-md-8">
+						<div class="ftext">กรอกคำค้นที่ต้องการ</div>
+						<input class="form-control" type="text" placeholder="คำค้น" id="q" name="q"
+						value="" 						>
+						
+						<div class="clearfix"></div>  
+						<div class="ftext">เลือกสาขางานวิจัย </div> 
+                        <select class="form-control" id="group" name="group">
+						<option value="">ค้นหาจากสาขาทั้งหมด</option>
+						  <option value="15" >สาขาการศึกษา</option><option value="11" >สาขานิติศาสตร์ </option><option value="10" >สาขาปรัชญา </option><option value="12" >สาขารัฐศาสตร์และรัฐประศาสนศาสตร์ </option><option value="5" >สาขาวิทยาศาสตร์กายภาพและคณิตศาสตร์</option><option value="6" >สาขาวิทยาศาสตร์การแพทย์และสุขภาพ</option><option value="7" >สาขาวิทยาศาสตร์เคมีและเภสัช</option><option value="9" >สาขาวิศวกรรมศาสตร์และอุตสาหกรรมวิจัย </option><option value="14" >สาขาสังคมวิทยา </option><option value="8" >สาขาเกษตรศาสตร์และชีววิทยา</option><option value="16" >สาขาเทคโนโลยีสารสนเทศ</option><option value="13" >สาขาเศรษฐศาสตร์ </option>   
+                        </select> 		
+	  <div class="clearfix"></div>  
+      <div class="ftext">เลือกหน่วยงาน</div> 
+      <select class="form-control" id="dep" name="dep">
+      <option value="">ค้นหาจากหน่วยงานทั้งหมด</option>
+        <option value="3" >คณะครุศาสตร์</option><option value="8" >คณะนิติศาสตร์</option><option value="9" >คณะนิเทศศาสตร์</option><option value="13" >คณะพยาบาลศาสตร์</option><option value="4" >คณะมนุษศาสตร์และสังคมศาสตร์</option><option value="1" >คณะวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</option><option value="5" >คณะวิทยาการจัดการ</option><option value="2" >คณะวิทยาศาสตร์และเทคโนโลยี</option><option value="10" >คณะอัญมณีศาสตร์และประยุกต์ศิลป์</option><option value="6" >คณะเทคโนโลยีการเกษตร</option><option value="7" >คณะเทคโนโลยีอุตสาหกรรม</option><option value="11" >สถาบันวิจัยและพัฒนา</option><option value="14" >สำนักวิทยบริการและเทคโนโลยีสารสนเทศ</option><option value="12" >สำนักศิลปวัฒนธรรม</option>   
+                        </select>
+					</div>	
+					<div class="col-md-4">
+					<div class="ftext">ประเภทที่ต้องการ</div>
+					<div style="display:none;">
+					  <div class="checkbox">
+						<input type="checkbox" id="t1" value="1" name="t1" >
+						<label for="t1">งานวิจัย/label>
+					  </div>				  
+					  <div class="checkbox">
+						<input type="checkbox" id="t2" value="1" name="t2" >
+						<label for="t2">บทความวิจัย</label>
+					  </div>	
+					  <div class="checkbox">
+						<input type="checkbox" id="t3" value="1" name="t3" >
+						<label for="t3">บทความวิชาการ</label>
+					  </div>
+					</div>
+					<div>
+					  <div class="checkbox">
+						<input type="checkbox" id="t4" value="1" name="t4" checked>
+						<label for="t4">งานวิจัย</label>
+					  </div>					  
+					  <div class="checkbox">
+						<input type="checkbox" id="t5" value="1" name="t5" checked>
+						<label for="t5">บทความวิจัย</label>
+					  </div>
+					  <div class="checkbox">
+						<input type="checkbox" id="t6" value="1" name="t6" checked>
+						<label for="t6">บทความวิชาการ</label>
+					  </div>
+					</div> 
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="col-md-12">
+					  <div class="ftext">เลือกรูปแบบการค้นหา</div>
+					  <div class="checkbox">
+						<input type="checkbox" id="ti" name="ti" value="1" checked>
+						<label for="ti">ชื่อเรื่อง</label>
+					  </div>
+					  <div class="checkbox">
+						<input type="checkbox" id="rs" name="rs" value="1" checked>
+						<label for="rs">ชื่อผู้แต่ง</label>
+					  </div>
+					  <div class="checkbox">
+						<input type="checkbox" id="kw" name="kw" value="1" checked>
+						<label for="kw">คำสำคัญ</label>
+					  </div>
+					  <div class="checkbox">
+						<input type="checkbox" id="yr" name="yr" value="1" checked>
+						<label for="yr">ปีการศึกษา</label>
+					  </div>
+					</div>
+				</div> 
+			<div class="clearfix"></div>
+			<div class="col-md-12">
+			<div class="col-md-3">
+				<button class="btn btn-lg btn-primary btn-block" type="submit">ค้นหาข้อมูลงานวิจัย</button>
+			</div>			
+			<div class="col-md-3">
+				<a href="index.php">กลับสู่หน้าหลัก</a>
+			</div>
+			</div>
+			</form>
+			<div class="clearfix"></div>
+			</div>
+			</div>	
+		</div>
+
+<h4 class="content-row-title">ลิสต์รายการค้นหางานวิจัย </h4> 
+<div class="panel panel-default"> 
+	<div class="panel-heading">ลิสต์รายการค้นหางานวิจัย</div>
+	  <table class="table table-hover">
+		<thead>
+		  <tr>
+			<th>#</th>
+			<th>ปี</th>
+			<th>ชื่อเรื่อง / ประเภท / ชื่อผู้แต่ง / สาขางานงานวิจัย</th> 
+		  </tr>
+		</thead>
+		<tbody>
+				  <tr>
+			<td>1</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2072&depid=7" class="colorlink">
+				ระบบสูบน้ำพลังงานแสงอาทิตย์แบบแพลอยน้ำ สำหรับเกษตรกรฐานรากในระดับครัวเรือน   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				ศรายุทธ์ จิตรพัฒนากุล, กฤษณะ จันทสิทธิ์  และ ปัญญา วงศ์ต่าย				
+				</span>  
+				<span class="badge badge-default">
+				  คณะเทคโนโลยีอุตสาหกรรม				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>2</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2106&depid=7" class="colorlink">
+				การสร้างเครื่องตัดหญ้าพลังงานไฟฟ้าชนิดเข็นเดินตาม สำหรับกลุ่มชุมชนตำบลรำพันอำเภอท่าใหม่ จังหวัดจันทบุรี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				กฤษณะ จันทสิทธิ์ และคณะ				
+				</span>  
+				<span class="badge badge-default">
+				  คณะเทคโนโลยีอุตสาหกรรม				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>3</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2107&depid=2" class="colorlink">
+				การปนเปื้อนไมโครเวฟพลาสติกในระบบนิเวศของปากแม่น้ำจันทบุรี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				จักรพันธ์ โพธิพัฒน์  และ  ศุทธินี เมฆประยูร				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาศาสตร์และเทคโนโลยี				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>4</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2108&depid=5" class="colorlink">
+				ต้นแบบระบบธุรกิจอัจริยะเพื่อวิเคราะห์และพยากรณ์การผลิตทุเรียน จังหวัดจันทบุรี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				ต่อสันติ์ พิพัฒนสุทธิ์, ชัยวิทย์ ถิระวณัฐพงศ์ และ ยุทธนา พรรคอนันต์ 				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาการจัดการ				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>5</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2109&depid=2" class="colorlink">
+				การเพิ่มคุณสมบัติทางความร้อนของถ่านอัดแท่งด้วยคาร์บอนแบล็ค   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				ธนพัฒน์ ถิระวุฒิ  และ  ชีวะ ทัศนา				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาศาสตร์และเทคโนโลยี				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>6</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2110&depid=7" class="colorlink">
+				ระบบวัดระดับความชื้นข้าวเปลือก โดยใช้การวิเคราะห์การส่งกำลังไฟฟ้าระหว่างสายอากาศระนาบแบบ 2 คลื่นความถี่   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				ปรมินทร์ วงษ์เจริญ และ โพธิ์ทอง ปราณีตพลกรัง				
+				</span>  
+				<span class="badge badge-default">
+				  คณะเทคโนโลยีอุตสาหกรรม				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>7</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2111&depid=5" class="colorlink">
+				การพัฒนาศักยภาพการท่องเที่ยวเชิงสร้างสรรค์ ตำบลบางสระเก้า จังหวัดจันทบุรี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				เปรมปรีดา ทองลา , เพ็ญศิริ สมารักษ์ และ บุษรา บรรจงการ				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาการจัดการ				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>8</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2112&depid=3" class="colorlink">
+				การวิเคราะห์เรื่องเล่าของหมอในชุมชนวรรณกรรมออนไลน์   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				สริตา ปัจจุสานนท์ และ กรฎา  สุขุม				
+				</span>  
+				<span class="badge badge-default">
+				  คณะครุศาสตร์				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>9</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2113&depid=2" class="colorlink">
+				การศึกษาความเป็นไปได้ในการตรึงเซลล์ยีสต์  Saccharomyces cerevisiae  โดยการห่อหุ้มด้วยโพลีแซคคาไรด์จากเปลือกทุเรียนและโซเดียมอัลจิเนต เพื่อนำไปใช้ในการผลิตไวน์กระเจี๊ยบ   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				มธุรา  อุณหศิริกุล และ เดือนเต็ม ทองเผือก				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาศาสตร์และเทคโนโลยี				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>10</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2114&depid=7" class="colorlink">
+				ชุดต้นแบบระบบน้ำหยดพลังงานแสงอาทิตย์ควบคุมอัตโนมัติผ่านเครือข่ายไร้สายสำหรับพื้นที่เกษตรห่างไกล   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				โพธิ์ทอง ปราณีตพลกรัง และ ปรมินทร์ วงศ์เจริญ				
+				</span>  
+				<span class="badge badge-default">
+				  คณะเทคโนโลยีอุตสาหกรรม				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>11</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2115&depid=7" class="colorlink">
+				การพัฒนาดินปั้นจากเปลือกหอยเชลล์เพื่อสร้างผลิตภัณฑ์ของที่ระลึกสำหรับวิสาหกิจชุมชนท่องเที่ยวบ้านน้ำเชี่ยว จังหวัดตราด   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				ภัทรา ศรีสุโข และคณะ				
+				</span>  
+				<span class="badge badge-default">
+				  คณะเทคโนโลยีอุตสาหกรรม				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>12</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2116&depid=3" class="colorlink">
+				การพัฒนาสมรรถภาพทางกาย ด้วยโปรแกรมการฝึกกิจกรรมทางกายแบบผสมผสานที่มีต่อคุณภาพชีวิตด้านร่างกายสำหรับผู้สูงอายุ จังหวัดจันทบุรี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				ปิยะพงศ์  กู้พงศ์พันธ์, ชิดชนก  ศรีราช และ ชาญชลักษณ์  เยี่ยมมิตร				
+				</span>  
+				<span class="badge badge-default">
+				  คณะครุศาสตร์				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>13</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2117&depid=1" class="colorlink">
+				ความพึงพอใจของนักศึกษาต่อการให้บริการของคณะวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏรำไพพรรณี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				มาลีวัลย์  นิโรจน์  และ อรรณพชัย  วรรณเลิศยศ				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>14</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2118&depid=2" class="colorlink">
+				การสำรวจไลเคนบริเวณเส้นทางศึกษาธรรมชาติในอุทยานแห่งชาติน้ำตกพลิ้ว จังหวัดจันทบุรี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				ชวัลรัตน์ สมนึก และคณะ				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาศาสตร์และเทคโนโลยี				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>15</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2119&depid=2" class="colorlink">
+				พฤติกรรมของผู้บริโภคเกี่ยวกับผลิตภัณฑ์แปรรูปจากกกในชุมชนบางสระเก้า  จังหวัดจันทบุรี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				วิทมา ธรรมเจริญ และคณะ				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาศาสตร์และเทคโนโลยี				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>16</td>
+			<td>2566</td>
+			<td>
+				<a href="showthesis.php?theid=2126&depid=2" class="colorlink">
+				การลู่เข้าของวิธีเกรเดียนต์ใกล้เคียงด้วยขั้นตอนเฉื่อยสลับกันสำหรับปัญหาในการหาค่าน้อยสุด   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				อนันตชัย แปดเจริญ, ชวนพิศ มังคละ และ นาคนิมิตร อรรคศรีวร				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาศาสตร์และเทคโนโลยี				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>17</td>
+			<td>2565</td>
+			<td>
+				<a href="showthesis.php?theid=2051&depid=5" class="colorlink">
+				ปัจจัยความสามารถปรับตัวในอาชีพที่ส่งผลต่อพฤติกรรมการทำงานของพนักงานโรงแรมในจังหวัดจันทบุรีภายใต้สถานการณ์โควิด-19   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				นภดล แสงแข, ภานิตา โพธิ์แก้ว และ นิศารัตน์ แสงแข				
+				</span>  
+				<span class="badge badge-default">
+				  คณะวิทยาการจัดการ				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>18</td>
+			<td>2565</td>
+			<td>
+				<a href="showthesis.php?theid=2052&depid=7" class="colorlink">
+				ระบบสาธิตสูบน้ำบาดาลน้ำตื้นพลังงานแสงอาทิตย์ขนาดเล็กสำหรับใช้ในครัวเรือน   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				ศรายุทธ์ จิตรพัฒนากุล , กฤษณะ จันทสิทธิ์  และ ธีระวัฒน์ ชื่นอัศดงคต				
+				</span>  
+				<span class="badge badge-default">
+				  คณะเทคโนโลยีอุตสาหกรรม				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>19</td>
+			<td>2565</td>
+			<td>
+				<a href="showthesis.php?theid=2053&depid=9" class="colorlink">
+				แนวทางการพัฒนาการท่องเที่ยวชุมชนโดยการสื่อสารแบบมีส่วนร่วม เพื่อสอดรับกับการพัฒนาระเบียงเศรษฐกิจภาคตะวันออก ตำบลวันยาว อำเภอขลุง จังหวัดจันทบุรี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				สมพงษ์ เส้งมณีย์, เหมือนฝัน คงสมแสวง และ สุทธินันท์ โสตวิถี				
+				</span>  
+				<span class="badge badge-default">
+				  คณะนิเทศศาสตร์				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+				  <tr>
+			<td>20</td>
+			<td>2565</td>
+			<td>
+				<a href="showthesis.php?theid=2062&depid=7" class="colorlink">
+				การออกแบบและสร้างเครื่องอัดก้อนจุลินทรีย์ต้นแบบสำหรับกลุ่มวิสาหกิจชุมชนบ้านปัถวี   
+				</a>
+				<div style="margin-top:10px;">
+				<span class="badge badge-warning">
+				งานวิจัย				</span> 
+				<span class="badge badge-success">
+				กิตติรัตน์ รุ่งรัตนาอุบล, นาวี เปลี่ยวจิตร์ และ ภัทรา ศรีสุโข				
+				</span>  
+				<span class="badge badge-default">
+				  คณะเทคโนโลยีอุตสาหกรรม				 
+				</span>
+
+				</div>
+			</td>
+		  </tr>
+						</tbody>
+	  </table> 	
+</div>
+
+<div class="row content-row-pagination">
+	<div class="col-md-12">
+	  <ul class="pagination default">
+		<li class="disabled"><a href="#">PREV</a></li><li class="active"><a href="#">1</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=2">2</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=3">3</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=4">4</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=5">5</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=6">6</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=7">7</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=8">8</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=9">9</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=10">10</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=11">11</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=12">12</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=13">13</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=14">14</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=15">15</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=16">16</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=17">17</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=18">18</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=19">19</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=20">20</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=21">21</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=22">22</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=23">23</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=24">24</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=25">25</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=26">26</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=27">27</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=28">28</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=29">29</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=30">30</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=31">31</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=32">32</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=33">33</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=34">34</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=35">35</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=36">36</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=37">37</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=38">38</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=39">39</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=40">40</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=41">41</a></li><li><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=42">42</a></li><li class="active"><a href="search.php?q=&group=&dep=&t1=&t2=&t3=&t4=1&t5=1&t6=1&ti=1&rs=1&kw=1&yr=1&showpage=2">NEXT</a></li>		</ul>
+	</div>
+</div>
+ 
+ 		
+		
+</div> 	
+<!-- content -->
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			  <div class="footer">
+				<div class="container">
+				  <div class="clearfix">
+					<div class="footer-logo">
+						<a href="index.php">
+						<img src="images/logorbru.png"></a>
+					</div>
+					<dl class="footer-nav">
+					  <dt class="nav-title"> ลิงค์หน่วยงานภายใน </dt>
+					  <dd class="nav-item"><a href="http://www.rbru.ac.th/" target="_blank">มหาวิทยาลัยราชภัฏรำไพพรรณี</a></dd>
+					  <dd class="nav-item"><a href="http://www.research.rbru.ac.th" target="_blank">สถาบันวิจัยและพัฒนา</a></dd>
+					  <dd class="nav-item"><a href="http://www.research.rbru.ac.th/temp.php?p=journal" target="_blank">วารสารวิจัยรำไพพรรณี</a></dd>
+            <dd class="nav-item"><a href="http://www.arit.rbru.ac.th/" target="_blank">สำนักวิทยบริการและเทคโนโลยีสารสนเทศ</a></dd>
+					  <dd class="nav-item"><a href="http://www.library.rbru.ac.th/" target="_blank">หอสมุดกลาง</a></dd>
+					</dl>
+
+					<dl class="footer-nav">
+					  <dt class="nav-title"> แหล่งทุนวิจัย </dt>
+					  <dd class="nav-item"><a href="http://www.nrct.go.th" target="_blank">สำนักงานคณะกรรมการวิจัยแห่งชาติ</a></dd>
+					  <dd class="nav-item"><a href="http://www.trf.or.th" target="_blank">สำนักงานกองทุนสนับสนุนการวิจัย</a></dd>
+					  <dd class="nav-item"><a href="http://www.nstda.or.th" target="_blank">สำนักงานพัฒนาวิทยาศาสตร์และเทคโนโลยีแห่งชาติ</a></dd>
+					  <dd class="nav-item"><a href="http://nccc.thaigov.net" target="_blank">สำนักงานคณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ</a></dd>
+					  <dd class="nav-item"><a href="http://www.ipst.ac.th" target="_blank">สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี (สสวท.)</a></dd>
+					</dl>
+
+					<dl class="footer-nav">
+					  <dt class="nav-title">ฐานข้อมูลวิจัยภายนอก </dt>
+					  <dd class="nav-item"><a href="http://www.riclib.nrct.go.th" target="_blank">ห้องสมุดศูนย์ข้อสนเทศ การวิจัย สำนักงานคณะกรรมการวิจัยแห่งชาติ</a></dd>
+					  <dd class="nav-item"><a href="http://www.nstda.or.th" target="_blank">ฐานข้อมูลงานวิจัยแห่ง ประเทศไทย</a></dd>
+					  <dd class="nav-item"><a href="http://www.thaiedresearch.org" target="_blank">ฐานข้อมูลวิจัยการศึกษา ศาสนา และวัฒนธรรม</a></dd>
+					  <dd class="nav-item"><a href="http://www.nso.go.th" target="_blank">สำนักงานสถิติแห่งชาติ</a></dd>
+					  <dd class="nav-item"><a href="http://www.nectec.or.th" target="_blank"> ศูนย์เทคโนโลยี อิเล็กทรอนิกส์ และคอมพิวเตอร์แห่งชาติ</a></dd>
+					</dl>
+
+					<dl class="footer-nav">
+					  <dt class="nav-title"> ฐานข้อมูลออนไลน์  </dt>
+					  <dd class="nav-item"><a href="http://tdc.thailis.or.th/tdc/" target="_blank">โครงการเครือข่ายระบบห้องสมุดในประเทศไทย (ThaiLIS)</a></dd>
+					  <dd class="nav-item"><a href="http://www.aritc.rbru.ac.th/on.html" target="_blank">ฐานข้อมูลอิเล็กทรอนิกส์ที่ได้รับการสนับสนุนจาก สกอ. </a></dd>
+					  <dd class="nav-item"><a href="http://portal.igpublish.com/iglibrary/feature/list.html" target="_blank">หนังสืออิเล็กทรอนิกส์  </a></dd>
+					  <dd class="nav-item"><a href="http://rbl.rbru.ac.th/" target="_blank">ระบบสืบค้นทรัพยากรสารสนเทศ  </a></dd>
+					  <dd class="nav-item"><a href="http://plag.grad.chula.ac.th/" target="_blank">ระบบตรวจสอบผลงานทางวิชาการ</a></dd>
+					</dl>
+				  </div>
+				  <div class="footer-copyright text-center">Copyright &copy; 2015 Rambhai Barni Rajabhat University.All rights reserved.</div>
+				</div>
+			  </div>
+			</div>
+			<div class="clearfix"></div>
+		</div><!-- panel body -->
+	</div>
+
+    <!--footer-->
+	<div class="site-footer">
+	  <div class="container">
+		<div class="copyright clearfix">
+		  <b>โดย สำนักวิทยบริการและเทคโนโลยีสารสนเทศ </b> มหาวิทยาลัยราชภัฏรำไพพรรณี 41 ม.5 ต.ท่าช้าง อ.เมือง จ.จันทบุรี
+		  </div>
+	  </div>
+	</div>
+  </body>
+</html>
